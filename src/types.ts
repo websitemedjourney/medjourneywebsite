@@ -13,7 +13,8 @@ export type ItineraryDay = {
   day: number;
   title: string;
   description: string;
-  meals: string;
+  meals?: string;
+  image?: string;
 };
 
 export type PackageDetail = {

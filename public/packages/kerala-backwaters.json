@@ -23,8 +23,8 @@
     "Chinese fishing nets at sunset"
   ],
   "itinerary": [
-    { "day": 1, "title": "Arrive Kochi", "description": "Welcome at airport, leisure evening at Marine Drive.", "meals": "Dinner" },
-    { "day": 2, "title": "Fort Kochi Tour", "description": "St. Francis Church, Jewish Synagogue, Kathakali show in evening.", "meals": "Breakfast + Dinner" },
+    { "day": 1, "title": "Arrive Kochi", "description": "Welcome at airport, leisure evening at Marine Drive.", "meals": "Dinner", "image": "/images/kerala-cover.jpg" },
+    { "day": 2, "title": "Fort Kochi Tour", "description": "St. Francis Church, Jewish Synagogue, Kathakali show in evening.", "meals": "Breakfast + Dinner", "image": "/images/kerala-cover.jpg" },
     { "day": 3, "title": "Drive to Munnar", "description": "Scenic drive via Cheeyappara waterfalls. Tea museum visit.", "meals": "Breakfast + Dinner" },
     { "day": 4, "title": "Munnar Sightseeing", "description": "Eravikulam Park, Mattupetty Dam, Echo Point.", "meals": "Breakfast + Lunch + Dinner" },
     { "day": 5, "title": "Munnar to Alleppey", "description": "Board houseboat by noon, cruise the backwaters.", "meals": "Breakfast + Lunch + Dinner" },
