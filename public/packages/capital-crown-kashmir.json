@@ -1,0 +1,85 @@
+{
+  "id": "capital-crown-kashmir",
+  "title": "Capital, Crown & Kashmir",
+  "destination": ["Delhi", "Agra", "Kashmir"],
+  "duration": "14 Days",
+  "price": "₹39,999",
+  "theme": {
+    "primaryColor": "#0B2A4A",
+    "secondaryColor": "#1F4E79",
+    "accentColor": "#F57C00",
+    "backgroundColor": "#F5F7FA",
+    "textColor": "#1A1A1A"
+  },
+  "coverImage": "/images/kashmir-cover.jpg",
+  "shortDescription": "Explore Delhi, Agra, and Kashmir in a culturally rich and scenic journey.",
+  "overview": "From the bustling avenues of Delhi to the marble symmetry of the Taj Mahal and the snow-laced valleys of Kashmir, this 14-day journey weaves together India's capital energy, Mughal grandeur, and Himalayan serenity. Glide on Dal Lake's shikaras, ride the Gulmarg gondola, and wander through Pahalgam's pine forests.",
+  "highlights": [
+    "Taj Mahal sunrise visit",
+    "Old & New Delhi heritage tour",
+    "Dal Lake shikara ride",
+    "Gulmarg Gondola Phase II",
+    "Pahalgam Aru & Betaab Valley",
+    "Mughal Gardens of Srinagar"
+  ],
+  "itinerary": [
+    { "day": 1, "title": "Journey Begins", "description": "Board train from your nearest railway station. Overnight onboard.", "meals": "No Meal" },
+    { "day": 2, "title": "Arrival in Delhi", "description": "Check into hotel, evening at leisure exploring Connaught Place.", "meals": "Dinner" },
+    { "day": 3, "title": "Agra Day Trip", "description": "Visit the Taj Mahal at sunrise, then Agra Fort.", "meals": "Breakfast + Lunch + Dinner" },
+    { "day": 4, "title": "Delhi Sightseeing", "description": "Qutub Minar, Lotus Temple, India Gate and Humayun's Tomb.", "meals": "Breakfast + Lunch + Dinner" },
+    { "day": 5, "title": "Fly to Srinagar", "description": "Arrive in the valley, transfer to a deluxe houseboat on Dal Lake.", "meals": "Breakfast + Dinner" },
+    { "day": 6, "title": "Srinagar City Tour", "description": "Mughal Gardens — Nishat, Shalimar — and a sunset shikara ride.", "meals": "Breakfast + Dinner" },
+    { "day": 7, "title": "Gulmarg Excursion", "description": "Gondola ride to Kongdoori, snow play and photography.", "meals": "Breakfast + Dinner" },
+    { "day": 8, "title": "Pahalgam Valley", "description": "Drive through saffron fields to Pahalgam, visit Betaab Valley.", "meals": "Breakfast + Dinner" }
+  ],
+  "inclusions": [
+    "Hotel stay on twin sharing",
+    "Meals as per itinerary",
+    "AC transportation throughout",
+    "All monument entry tickets",
+    "English-speaking tour manager",
+    "Airport transfers"
+  ],
+  "exclusions": [
+    "Flight tickets",
+    "Personal expenses & tips",
+    "Travel insurance",
+    "Anything not listed in inclusions"
+  ],
+  "gallery": [
+    "/images/kashmir-cover.jpg",
+    "/images/kerala-cover.jpg",
+    "/images/rajasthan-cover.jpg",
+    "/images/kashmir-cover.jpg"
+  ],
+  "termsNote": "This is a standard itinerary shared to give you a clear overview of the tour flow and possible experiences. After your preferences, requirements, and customizations are discussed, a final booking confirmation will be issued. All inclusions, exclusions, travel arrangements, and other important details will be clearly outlined in that final confirmation document. This helps us ensure full transparency and deliver a personalized travel experience that suits you best.",
+  "termsAndConditions": {
+    "paymentPolicy": [
+      "A minimum 30% advance payment is required to confirm all bookings.",
+      "Full payment for train and flight tickets must be made at the time of confirmation.",
+      "The balance payment for domestic tours must be completed at least 7 days prior to the departure date.",
+      "Bookings are subject to cancellation in case of non-payment within the stipulated timeline."
+    ],
+    "hotelPolicy": [
+      "Standard check-in is at 1:00 PM and check-out is at 11:00 AM.",
+      "Early check-in or late check-out is subject to room availability and may incur extra charges.",
+      "Room categories are confirmed at the time of booking; upgrades are subject to availability."
+    ],
+    "transportationPolicy": [
+      "AC vehicles are provided as per group size and itinerary.",
+      "The vehicle is not at disposal and will operate strictly per the planned itinerary.",
+      "Any detours or extra usage will be charged separately."
+    ],
+    "cancellationPolicy": [
+      "Cancellations made 30 days or more before departure: full refund minus processing fees.",
+      "Cancellations between 15-29 days before departure: 50% refund of the package cost.",
+      "Cancellations within 7 days of departure: no refund will be issued.",
+      "Train and flight tickets are non-refundable once booked."
+    ],
+    "childPolicy": [
+      "Children below 4 years travel free with parents (no extra bed).",
+      "Children aged 5-11 are charged at child rate without an extra bed.",
+      "Children 12 years and above are considered adults."
+    ]
+  }
+}

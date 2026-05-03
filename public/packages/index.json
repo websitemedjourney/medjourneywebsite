@@ -1,0 +1,34 @@
+{
+  "packages": [
+    {
+      "id": "capital-crown-kashmir",
+      "title": "Capital, Crown & Kashmir",
+      "destination": ["Delhi", "Agra", "Kashmir"],
+      "duration": "14 Days",
+      "price": "₹39,999",
+      "image": "/images/kashmir-cover.jpg",
+      "shortDescription": "Explore Delhi, Agra, and Kashmir in one unforgettable journey through history and snow-clad valleys.",
+      "accentColor": "#F57C00"
+    },
+    {
+      "id": "kerala-backwaters",
+      "title": "Kerala Backwaters Bliss",
+      "destination": ["Kochi", "Alleppey", "Munnar"],
+      "duration": "7 Days",
+      "price": "₹24,499",
+      "image": "/images/kerala-cover.jpg",
+      "shortDescription": "Cruise tranquil backwaters, sip cardamom tea on misty hills, and unwind in God's own country.",
+      "accentColor": "#10B981"
+    },
+    {
+      "id": "royal-rajasthan",
+      "title": "Royal Rajasthan Odyssey",
+      "destination": ["Jaipur", "Jodhpur", "Jaisalmer", "Udaipur"],
+      "duration": "10 Days",
+      "price": "₹32,899",
+      "image": "/images/rajasthan-cover.jpg",
+      "shortDescription": "Live like royalty across pink cities, blue alleys, golden dunes, and shimmering lake palaces.",
+      "accentColor": "#DC2626"
+    }
+  ]
+}
