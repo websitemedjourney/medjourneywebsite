@@ -6,10 +6,10 @@ const PackageCard = ({ pkg, index }: { pkg: PackageSummary; index: number }) => 
   return (
     <Link
       to={`/package/${pkg.id}`}
-      className="group block rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 fade-in"
+      className="group flex flex-col md:flex-row rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 fade-in"
       style={{ animationDelay: `${index * 80}ms` }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative w-full md:w-2/5 shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[280px] overflow-hidden">
         <img
           src={pkg.image}
           alt={pkg.title}
@@ -36,8 +36,8 @@ const PackageCard = ({ pkg, index }: { pkg: PackageSummary; index: number }) => 
         </div>
       </div>
 
-      <div className="p-5 sm:p-6">
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{pkg.shortDescription}</p>
+      <div className="p-5 sm:p-6 md:p-8 flex flex-col justify-center flex-1">
+        <p className="text-sm text-muted-foreground line-clamp-2 md:line-clamp-3 mb-4 md:mb-6">{pkg.shortDescription}</p>
         <div className="flex items-end justify-between">
           <div>
             <div className="text-xs text-muted-foreground">Starting from</div>

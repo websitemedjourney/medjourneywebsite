@@ -80,15 +80,22 @@ const PackagesSection = () => {
         </div>
 
         {loading ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-6 lg:gap-8">
             {[0,1,2].map(i => (
-              <div key={i} className="aspect-[4/5] rounded-3xl bg-muted animate-pulse" />
+              <div key={i} className="flex flex-col md:flex-row rounded-3xl overflow-hidden bg-white shadow-sm border animate-pulse">
+                <div className="w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px] bg-muted shrink-0" />
+                <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col justify-center">
+                  <div className="h-4 bg-muted rounded w-3/4 mb-4" />
+                  <div className="h-4 bg-muted rounded w-1/2 mb-6" />
+                  <div className="h-10 bg-muted rounded w-full md:w-1/3" />
+                </div>
+              </div>
             ))}
           </div>
         ) : filtered.length === 0 ? (
           <p className="text-center text-muted-foreground py-12">No packages match your search.</p>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="flex flex-col gap-6 lg:gap-8">
             {filtered.map((p, i) => <PackageCard key={p.id} pkg={p} index={i} />)}
           </div>
         )}
