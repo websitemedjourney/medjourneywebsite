@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,6 +10,8 @@ import TermsSection from "@/components/TermsSection";
 import { applyTheme, DEFAULT_THEME } from "@/lib/theme";
 import type { PackageDetail } from "@/types";
 import { ArrowLeft, Calendar, MapPin, Check, Utensils, Phone, MessageCircle, ChevronRight, Sparkles } from "lucide-react";
+
+const BRUSH_MASK = `url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035' numOctaves='4' result='noise' /%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='35' xChannelSelector='R' yChannelSelector='G' /%3E%3C/filter%3E%3Cg filter='url(%23b)' fill='black'%3E%3Crect width='82%25' height='82%25' x='9%25' y='9%25' rx='12' /%3E%3Crect width='70%25' height='6%25' x='15%25' y='4%25' rx='4' /%3E%3Crect width='70%25' height='6%25' x='15%25' y='90%25' rx='4' /%3E%3Crect width='6%25' height='70%25' x='4%25' y='15%25' rx='4' /%3E%3Crect width='6%25' height='70%25' x='90%25' y='15%25' rx='4' /%3E%3C/g%3E%3C/svg%3E")`;
 
 const PackageDetailPage = () => {
   const { packageId } = useParams<{ packageId: string }>();
@@ -153,59 +155,92 @@ const PackageDetailPage = () => {
             <h2 className="font-display text-4xl sm:text-5xl font-bold theme-text-primary">Itinerary</h2>
           </div>
           <div className="relative max-w-3xl mx-auto">
-            <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2"
+            <div className="absolute left-6 sm:hidden top-0 bottom-0 w-0.5 -translate-x-1/2"
               style={{ background: "rgb(var(--accent-color) / 0.3)" }} />
-            <div className="space-y-8">
+            <div className="flex flex-col gap-8 sm:gap-0">
               {pkg.itinerary.map((d, i) => {
                 const isEvenDay = (i + 1) % 2 === 0;
+                const isLast = i === pkg.itinerary.length - 1;
 
                 return (
-                  <div key={d.day} className="relative flex flex-col sm:flex-row sm:items-center gap-6">
-                    <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full grid place-items-center font-display font-bold text-white shadow-lg z-10"
-                      style={{ background: "rgb(var(--accent-color))" }}>
-                      {d.day}
-                    </div>
+                  <Fragment key={d.day}>
+                    <div className="relative flex flex-col sm:flex-row sm:items-center gap-6">
+                      {/* Timeline Dot (Mobile Only) */}
+                      <div className="absolute left-6 top-10 -translate-x-1/2 w-3 h-3 rounded-full shadow-sm z-10 sm:hidden"
+                        style={{ background: "rgb(var(--accent-color))" }} />
 
-                    {/* Content Side */}
-                    <div className={`sm:w-1/2 ml-20 sm:ml-0 sm:px-8 ${isEvenDay ? "sm:order-2" : "sm:order-1"}`}>
-                      <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-md">
-                        <div className="text-xs font-semibold tracking-widest uppercase mb-2"
-                          style={{ color: "rgb(var(--accent-color))" }}>
-                          Day {d.day}
+                      {/* Content Side */}
+                      <div className={`sm:w-1/2 ml-20 sm:ml-0 sm:px-8 ${isEvenDay ? "sm:order-2" : "sm:order-1"}`}>
+                        <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-md">
+                          <div className="text-xs font-semibold tracking-widest uppercase mb-2"
+                            style={{ color: "rgb(var(--accent-color))" }}>
+                            Day {d.day}
+                          </div>
+                          <h3 className="font-display text-xl font-bold theme-text-primary mb-2">{d.title}</h3>
+
+                          {d.image && (
+                            <img
+                              src={d.image}
+                              alt={d.title}
+                              loading="lazy"
+                              className="w-full h-auto object-cover drop-shadow-md mb-4 sm:hidden"
+                              style={{
+                                WebkitMaskImage: BRUSH_MASK,
+                                maskImage: BRUSH_MASK,
+                                WebkitMaskSize: "100% 100%",
+                                maskSize: "100% 100%"
+                              }}
+                            />
+                          )}
+
+                          <p className="text-sm opacity-75 mb-3 leading-relaxed">{d.description}</p>
+
+                          {d.meals && (
+                            <div className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground">
+                              <Utensils className="w-3 h-3" /> {d.meals}
+                            </div>
+                          )}
                         </div>
-                        <h3 className="font-display text-xl font-bold theme-text-primary mb-2">{d.title}</h3>
+                      </div>
 
+                      {/* Image / Spacer Side */}
+                      <div className={`hidden sm:block sm:w-1/2 sm:px-8 ${isEvenDay ? "sm:order-1" : "sm:order-2"}`}>
                         {d.image && (
                           <img
                             src={d.image}
                             alt={d.title}
                             loading="lazy"
-                            className="w-full h-auto object-cover rounded-xl shadow-sm mb-4 sm:hidden"
+                            className="w-full h-auto object-cover drop-shadow-md"
+                            style={{
+                              WebkitMaskImage: BRUSH_MASK,
+                              maskImage: BRUSH_MASK,
+                              WebkitMaskSize: "100% 100%",
+                              maskSize: "100% 100%"
+                            }}
                           />
-                        )}
-
-                        <p className="text-sm opacity-75 mb-3 leading-relaxed">{d.description}</p>
-
-                        {d.meals && (
-                          <div className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground">
-                            <Utensils className="w-3 h-3" /> {d.meals}
-                          </div>
                         )}
                       </div>
                     </div>
 
-                    {/* Image / Spacer Side */}
-                    <div className={`hidden sm:block sm:w-1/2 sm:px-8 ${isEvenDay ? "sm:order-1" : "sm:order-2"}`}>
-                      {d.image && (
-                        <img
-                          src={d.image}
-                          alt={d.title}
-                          loading="lazy"
-                          className="w-full h-auto object-cover rounded-xl shadow-sm"
-                        />
-                      )}
-                    </div>
-                  </div>
+                    {/* Connecting Arrow (Desktop Only) */}
+                    {!isLast && (
+                      <div className="hidden sm:flex justify-center py-2 opacity-60" style={{ color: "rgb(var(--accent-color))" }}>
+                        {!isEvenDay ? (
+                          <svg width="360" height="120" viewBox="0 0 360 120" className="drop-shadow-md" style={{ stroke: "currentColor", fill: "none", strokeWidth: 4, strokeDasharray: "8 8" }}>
+                            <path d="M 60 10 C 60 60, 300 60, 300 95" />
+                            <polygon points="288,85 312,85 300,105" style={{ fill: "currentColor", stroke: "none" }} />
+                            <rect x="54" y="4" width="12" height="12" rx="3" style={{ fill: "currentColor", stroke: "none" }} />
+                          </svg>
+                        ) : (
+                          <svg width="360" height="120" viewBox="0 0 360 120" className="drop-shadow-md" style={{ stroke: "currentColor", fill: "none", strokeWidth: 4, strokeDasharray: "8 8" }}>
+                            <path d="M 300 10 C 300 60, 60 60, 60 95" />
+                            <polygon points="48,85 72,85 60,105" style={{ fill: "currentColor", stroke: "none" }} />
+                            <rect x="294" y="4" width="12" height="12" rx="3" style={{ fill: "currentColor", stroke: "none" }} />
+                          </svg>
+                        )}
+                      </div>
+                    )}
+                  </Fragment>
                 );
               })}
             </div>
