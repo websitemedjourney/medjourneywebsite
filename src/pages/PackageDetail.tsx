@@ -167,25 +167,25 @@ const PackageDetailPage = () => {
                     </div>
 
                     {/* Content Side */}
-                    <div className={`flex-1 sm:w-1/2 ml-20 sm:ml-0 sm:px-8 ${isEvenDay ? "sm:order-2" : "sm:order-1"}`}>
+                    <div className={`sm:w-1/2 ml-20 sm:ml-0 sm:px-8 ${isEvenDay ? "sm:order-2" : "sm:order-1"}`}>
                       <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-md">
                         <div className="text-xs font-semibold tracking-widest uppercase mb-2"
                           style={{ color: "rgb(var(--accent-color))" }}>
                           Day {d.day}
                         </div>
                         <h3 className="font-display text-xl font-bold theme-text-primary mb-2">{d.title}</h3>
-                        
+
                         {d.image && (
-                          <img 
-                            src={d.image} 
-                            alt={d.title} 
-                            loading="lazy" 
-                            className="w-full h-auto object-cover rounded-xl shadow-sm mb-4 sm:hidden" 
+                          <img
+                            src={d.image}
+                            alt={d.title}
+                            loading="lazy"
+                            className="w-full h-auto object-cover rounded-xl shadow-sm mb-4 sm:hidden"
                           />
                         )}
-                        
+
                         <p className="text-sm opacity-75 mb-3 leading-relaxed">{d.description}</p>
-                        
+
                         {d.meals && (
                           <div className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground">
                             <Utensils className="w-3 h-3" /> {d.meals}
@@ -197,11 +197,11 @@ const PackageDetailPage = () => {
                     {/* Image / Spacer Side */}
                     <div className={`hidden sm:block sm:w-1/2 sm:px-8 ${isEvenDay ? "sm:order-1" : "sm:order-2"}`}>
                       {d.image && (
-                        <img 
-                          src={d.image} 
-                          alt={d.title} 
-                          loading="lazy" 
-                          className="w-full h-auto object-cover rounded-xl shadow-sm" 
+                        <img
+                          src={d.image}
+                          alt={d.title}
+                          loading="lazy"
+                          className="w-full h-auto object-cover rounded-xl shadow-sm"
                         />
                       )}
                     </div>
@@ -236,7 +236,7 @@ const PackageDetailPage = () => {
                 key={i}
                 className={`relative overflow-hidden rounded-2xl group ${i === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"}`}
               >
-                <img src={src} alt={`${pkg.title} ${i+1}`} loading="lazy"
+                <img src={src} alt={`${pkg.title} ${i + 1}`} loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
