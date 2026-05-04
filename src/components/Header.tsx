@@ -16,15 +16,18 @@ const Header = () => {
 
   useEffect(() => setOpen(false), [pathname]);
 
-  const textClass = scrolled ? "theme-text-primary" : "text-white";
-  const linkHover = scrolled
+  const isDarkBanner = pathname === "/" || pathname.startsWith("/package/");
+  const isSolid = scrolled || !isDarkBanner;
+
+  const textClass = isSolid ? "theme-text-primary" : "text-white";
+  const linkHover = isSolid
     ? "hover:theme-text-accent"
     : "hover:text-[rgb(var(--accent-color))]";
 
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-white/90 shadow-sm" : "bg-gradient-to-b from-black/40 to-transparent"
+        isSolid ? "backdrop-blur-xl bg-white/90 shadow-sm" : "bg-gradient-to-b from-black/40 to-transparent"
       }`}
     >
       <div className="container-px flex h-16 sm:h-20 items-center justify-between">
@@ -41,6 +44,7 @@ const Header = () => {
         <nav className={`hidden md:flex items-center gap-8 text-sm font-medium ${textClass}`}>
           <Link to="/" className={`${linkHover} transition`}>Home</Link>
           <Link to="/packages" className={`${linkHover} transition`}>Packages</Link>
+          <Link to="/contact" className={`${linkHover} transition`}>Contact</Link>
           <a href="/#reviews" className={`${linkHover} transition`}>Reviews</a>
           <a href="/#video" className={`${linkHover} transition`}>Watch</a>
           <a href="#book" className="btn-accent !py-2.5 !px-5 text-sm">Book Now</a>
@@ -60,6 +64,7 @@ const Header = () => {
           <nav className="container-px py-4 flex flex-col gap-3 text-sm font-medium theme-text-primary">
             <Link to="/" className="hover:theme-text-accent">Home</Link>
             <Link to="/packages" className="hover:theme-text-accent">Packages</Link>
+            <Link to="/contact" className="hover:theme-text-accent">Contact</Link>
             <a href="/#reviews" className="hover:theme-text-accent">Reviews</a>
             <a href="/#video" className="hover:theme-text-accent">Watch</a>
             <a href="#book" className="btn-accent w-full">Book Now</a>
