@@ -6,7 +6,7 @@ import {
   YoutubeIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Plane, Mail } from "lucide-react";
+import { Plane } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -46,27 +46,16 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="text-white text-base font-semibold mb-3">
-            Newsletter
+            Follow Us
           </h4>
-          <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              required
-              placeholder="you@email.com"
-              className="flex-1 rounded-full px-4 py-2.5 text-sm text-foreground bg-white/95 outline-none"
-            />
-            <button className="btn-accent !py-2.5 !px-4" aria-label="Subscribe">
-              <Mail className="w-4 h-4" />
-            </button>
-          </form>
-          <div className="flex gap-3 mt-4 text-white/80">
+          <div className="flex gap-3 text-white/80">
             <a href="#" aria-label="Instagram">
               <HugeiconsIcon icon={InstagramIcon} className="w-5 h-5" />
             </a>
             <a href="#" aria-label="Facebook">
               <HugeiconsIcon icon={FacebookIcon} className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Youtube">
+            <a href="https://www.youtube.com/@medjourneywebsite" aria-label="Youtube" >
               <HugeiconsIcon icon={YoutubeIcon} className="w-5 h-5" />
             </a>
           </div>
