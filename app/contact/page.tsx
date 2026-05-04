@@ -93,7 +93,7 @@ const ContactPage = () => {
 
       {/* Page Header */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--primary-color))/10] to-[rgb(var(--accent-color))/5] pointer-events-none" />
+        <div className="absolute inset-0 bg-main pointer-events-none" />
         <div className="container-px relative z-10 text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold theme-text-primary mb-4">
             Contact Us
