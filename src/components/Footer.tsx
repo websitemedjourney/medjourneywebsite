@@ -1,4 +1,5 @@
 import { Plane, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
         <div>
           <h4 className="text-white text-base font-semibold mb-3">Explore</h4>
           <ul className="space-y-2 text-sm text-white/80">
-            <li><a href="/#packages">Packages</a></li>
+            <li><Link to="/packages">Packages</Link></li>
             <li><a href="/#reviews">Reviews</a></li>
             <li><a href="/#video">Latest Video</a></li>
           </ul>

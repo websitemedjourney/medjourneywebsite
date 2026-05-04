@@ -40,7 +40,7 @@ const Header = () => {
 
         <nav className={`hidden md:flex items-center gap-8 text-sm font-medium ${textClass}`}>
           <Link to="/" className={`${linkHover} transition`}>Home</Link>
-          <a href="/#packages" className={`${linkHover} transition`}>Packages</a>
+          <Link to="/packages" className={`${linkHover} transition`}>Packages</Link>
           <a href="/#reviews" className={`${linkHover} transition`}>Reviews</a>
           <a href="/#video" className={`${linkHover} transition`}>Watch</a>
           <a href="#book" className="btn-accent !py-2.5 !px-5 text-sm">Book Now</a>
@@ -59,7 +59,7 @@ const Header = () => {
         <div className="md:hidden bg-white/95 backdrop-blur-xl border-t shadow-lg">
           <nav className="container-px py-4 flex flex-col gap-3 text-sm font-medium theme-text-primary">
             <Link to="/" className="hover:theme-text-accent">Home</Link>
-            <a href="/#packages" className="hover:theme-text-accent">Packages</a>
+            <Link to="/packages" className="hover:theme-text-accent">Packages</Link>
             <a href="/#reviews" className="hover:theme-text-accent">Reviews</a>
             <a href="/#video" className="hover:theme-text-accent">Watch</a>
             <a href="#book" className="btn-accent w-full">Book Now</a>

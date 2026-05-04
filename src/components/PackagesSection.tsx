@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import type { PackageSummary } from "@/types";
 import PackageCard from "./PackageCard";
-import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PackagesSection = () => {
   const [packages, setPackages] = useState<PackageSummary[]>([]);
-  const [query, setQuery] = useState("");
-  const [destination, setDestination] = useState("all");
-  const [sort, setSort] = useState<"default" | "low" | "high">("default");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,21 +14,7 @@ const PackagesSection = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  const allDestinations = Array.from(
-    new Set(packages.flatMap(p => p.destination))
-  ).sort();
-
-  const parsePrice = (p: string) => Number(p.replace(/[^0-9]/g, "")) || 0;
-
-  const filtered = packages
-    .filter(p => p.title.toLowerCase().includes(query.toLowerCase()) ||
-                p.shortDescription.toLowerCase().includes(query.toLowerCase()))
-    .filter(p => destination === "all" || p.destination.includes(destination))
-    .sort((a, b) => {
-      if (sort === "low") return parsePrice(a.price) - parsePrice(b.price);
-      if (sort === "high") return parsePrice(b.price) - parsePrice(a.price);
-      return 0;
-    });
+  const featuredPackages = packages.slice(0, 3);
 
   return (
     <section id="packages" className="section-pad theme-bg">
@@ -49,36 +32,6 @@ const PackagesSection = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-col md:flex-row gap-3 mb-10 p-3 bg-white rounded-2xl shadow-sm border">
-          <div className="flex-1 flex items-center gap-2 px-3">
-            <Search className="w-4 h-4 text-muted-foreground" />
-            <input
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder="Search packages..."
-              className="w-full py-2.5 bg-transparent outline-none text-sm"
-            />
-          </div>
-          <select
-            value={destination}
-            onChange={e => setDestination(e.target.value)}
-            className="px-4 py-2.5 rounded-xl bg-secondary text-sm outline-none"
-          >
-            <option value="all">All Destinations</option>
-            {allDestinations.map(d => <option key={d} value={d}>{d}</option>)}
-          </select>
-          <select
-            value={sort}
-            onChange={e => setSort(e.target.value as typeof sort)}
-            className="px-4 py-2.5 rounded-xl bg-secondary text-sm outline-none"
-          >
-            <option value="default">Sort: Featured</option>
-            <option value="low">Price: Low → High</option>
-            <option value="high">Price: High → Low</option>
-          </select>
-        </div>
-
         {loading ? (
           <div className="flex flex-col gap-6 lg:gap-8">
             {[0,1,2].map(i => (
@@ -92,12 +45,22 @@ const PackagesSection = () => {
               </div>
             ))}
           </div>
-        ) : filtered.length === 0 ? (
-          <p className="text-center text-muted-foreground py-12">No packages match your search.</p>
+        ) : featuredPackages.length === 0 ? (
+          <p className="text-center text-muted-foreground py-12">No packages found.</p>
         ) : (
-          <div className="flex flex-col gap-6 lg:gap-8">
-            {filtered.map((p, i) => <PackageCard key={p.id} pkg={p} index={i} />)}
-          </div>
+          <>
+            <div className="flex flex-col gap-6 lg:gap-8">
+              {featuredPackages.map((p, i) => <PackageCard key={p.id} pkg={p} index={i} />)}
+            </div>
+            <div className="text-center mt-12">
+              <Link 
+                to="/packages" 
+                className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium transition-colors rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm"
+              >
+                View All Packages
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </section>
@@ -105,3 +68,4 @@ const PackagesSection = () => {
 };
 
 export default PackagesSection;
+
