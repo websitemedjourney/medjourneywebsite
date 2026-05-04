@@ -1,0 +1,68 @@
+{
+  "id": "himalayan-foothills",
+  "title": "Himalayan Foothills Serenity",
+  "destination": [
+    "Rishikesh",
+    "Haridwar",
+    "Mussoorie"
+  ],
+  "duration": "5 Days",
+  "price": "\u20b916,999",
+  "theme": {
+    "primaryColor": "#4d7c0f",
+    "secondaryColor": "#65a30d",
+    "accentColor": "#84cc16",
+    "backgroundColor": "#f7fee7",
+    "textColor": "#1a2e05"
+  },
+  "coverImage": "/images/himalayan-foothills-cover.png",
+  "shortDescription": "Spiritual awakening and nature trails in the Himalayan foothills.",
+  "overview": "Experience the spiritual aura of the Ganges in Haridwar and Rishikesh, combined with the colonial charm of Mussoorie.",
+  "highlights": [
+    "Ganga Aarti at Har ki Pauri",
+    "River Rafting in Rishikesh",
+    "Kempty Falls in Mussoorie",
+    "Mall Road stroll"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Haridwar",
+      "description": "Check-in and evening Ganga Aarti."
+    },
+    {
+      "day": 2,
+      "title": "Rishikesh Exploration",
+      "description": "Visit Laxman Jhula, Triveni Ghat, and optional rafting."
+    },
+    {
+      "day": 3,
+      "title": "Drive to Mussoorie",
+      "description": "Scenic drive to the Queen of Hills."
+    },
+    {
+      "day": 4,
+      "title": "Mussoorie Sightseeing",
+      "description": "Visit Kempty Falls and Gun Hill."
+    },
+    {
+      "day": 5,
+      "title": "Departure",
+      "description": "Return to Dehradun/Delhi."
+    }
+  ],
+  "inclusions": [
+    "4 Nights accommodation",
+    "Breakfast & Dinner",
+    "Transfers",
+    "Sightseeing"
+  ],
+  "exclusions": [
+    "Flights/Trains",
+    "Adventure activities",
+    "Entry fees"
+  ],
+  "gallery": [
+    "/images/himalayan-foothills-cover.png"
+  ]
+}

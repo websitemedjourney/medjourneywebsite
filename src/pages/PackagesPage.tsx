@@ -10,6 +10,10 @@ const PackagesPage = () => {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"default" | "low" | "high" | "short" | "long">("default");
   const [loading, setLoading] = useState(true);
+  
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9; // 3 rows of 3 columns
 
   useEffect(() => {
     // Scroll to top when loading the page
@@ -20,6 +24,11 @@ const PackagesPage = () => {
       .then(d => setPackages(d.packages || []))
       .finally(() => setLoading(false));
   }, []);
+
+  // Reset page to 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, sort]);
 
   const parsePrice = (p: string) => Number(p.replace(/[^\d]/g, "")) || 0;
   const parseDuration = (d: string) => Number(d.split(" ")[0]) || 0;
@@ -35,6 +44,12 @@ const PackagesPage = () => {
     if (sort === "long") return parseDuration(b.duration) - parseDuration(a.duration);
     return 0;
   });
+
+  const totalPages = Math.ceil(sortedPackages.length / itemsPerPage);
+  const paginatedPackages = sortedPackages.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -52,7 +67,7 @@ const PackagesPage = () => {
           </div>
 
           {/* Filters */}
-          <div className="flex flex-col md:flex-row gap-3 mb-10 p-3 bg-white rounded-2xl shadow-sm border max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-3 mb-10 p-3 bg-white rounded-2xl shadow-sm border max-w-6xl mx-auto">
             <div className="flex-1 flex items-center gap-2 px-3">
               <Search className="w-4 h-4 text-muted-foreground" />
               <input
@@ -76,14 +91,14 @@ const PackagesPage = () => {
           </div>
 
           {loading ? (
-            <div className="flex flex-col gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {[0,1,2].map(i => (
-                <div key={i} className="flex flex-col md:flex-row rounded-3xl overflow-hidden bg-white shadow-sm border animate-pulse">
-                  <div className="w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px] bg-muted shrink-0" />
+                <div key={i} className="flex flex-col rounded-3xl overflow-hidden bg-white shadow-sm border animate-pulse">
+                  <div className="w-full aspect-[4/3] bg-muted shrink-0" />
                   <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col justify-center">
                     <div className="h-4 bg-muted rounded w-3/4 mb-4" />
                     <div className="h-4 bg-muted rounded w-1/2 mb-6" />
-                    <div className="h-10 bg-muted rounded w-full md:w-1/3" />
+                    <div className="h-10 bg-muted rounded w-full" />
                   </div>
                 </div>
               ))}
@@ -105,8 +120,45 @@ const PackagesPage = () => {
               </button>
             </div>
           ) : (
-            <div className="flex flex-col gap-6 lg:gap-8 max-w-5xl mx-auto">
-              {sortedPackages.map((p, i) => <PackageCard key={p.id} pkg={p} index={i} />)}
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                {paginatedPackages.map((p, i) => <PackageCard key={p.id} pkg={p} index={i} layout="grid" />)}
+              </div>
+              
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-2 mt-12">
+                  <button
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="px-4 py-2 rounded-full border text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-secondary transition-colors"
+                  >
+                    Previous
+                  </button>
+                  <div className="flex gap-1">
+                    {Array.from({ length: totalPages }).map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setCurrentPage(i + 1)}
+                        className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
+                          currentPage === i + 1 
+                            ? "bg-primary text-primary-foreground" 
+                            : "hover:bg-secondary border"
+                        }`}
+                      >
+                        {i + 1}
+                      </button>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="px-4 py-2 rounded-full border text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-secondary transition-colors"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>

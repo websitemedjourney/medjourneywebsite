@@ -1,0 +1,73 @@
+{
+  "id": "meghalaya-monsoons",
+  "title": "Mystical Meghalaya",
+  "destination": [
+    "Shillong",
+    "Cherrapunji",
+    "Dawki"
+  ],
+  "duration": "6 Days",
+  "price": "\u20b926,999",
+  "theme": {
+    "primaryColor": "#15803d",
+    "secondaryColor": "#16a34a",
+    "accentColor": "#4ade80",
+    "backgroundColor": "#f0fdf4",
+    "textColor": "#052e16"
+  },
+  "coverImage": "/images/meghalaya-monsoons-cover.png",
+  "shortDescription": "Living root bridges, crystal clear rivers, and the Scotland of the East.",
+  "overview": "Journey into the Abode of Clouds. Marvel at the living root bridges, boat on the crystal clear Umngot River, and chase stunning waterfalls.",
+  "highlights": [
+    "Umiam Lake",
+    "Double Decker Root Bridge",
+    "Dawki River Boating",
+    "Seven Sisters Falls"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Guwahati to Shillong",
+      "description": "Stop at Umiam Lake."
+    },
+    {
+      "day": 2,
+      "title": "Shillong Sightseeing",
+      "description": "Shillong Peak, Elephant Falls, Ward's Lake."
+    },
+    {
+      "day": 3,
+      "title": "Transfer to Cherrapunji",
+      "description": "Visit Seven Sisters Falls and Mawsmai Cave."
+    },
+    {
+      "day": 4,
+      "title": "Root Bridge Trek",
+      "description": "Trek to the Double Decker Living Root Bridge."
+    },
+    {
+      "day": 5,
+      "title": "Dawki & Mawlynnong",
+      "description": "Cleanest village in Asia and crystal clear Umngot river."
+    },
+    {
+      "day": 6,
+      "title": "Departure",
+      "description": "Drive back to Guwahati."
+    }
+  ],
+  "inclusions": [
+    "5 Nights accommodation",
+    "Breakfast",
+    "Transfers",
+    "Sightseeing"
+  ],
+  "exclusions": [
+    "Flights",
+    "Boating fees",
+    "Trekking guide"
+  ],
+  "gallery": [
+    "/images/meghalaya-monsoons-cover.png"
+  ]
+}

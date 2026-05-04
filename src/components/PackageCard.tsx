@@ -2,14 +2,18 @@ import { Link } from "react-router-dom";
 import { MapPin, Clock, ArrowRight } from "lucide-react";
 import type { PackageSummary } from "@/types";
 
-const PackageCard = ({ pkg, index }: { pkg: PackageSummary; index: number }) => {
+const PackageCard = ({ pkg, index, layout = "row" }: { pkg: PackageSummary; index: number; layout?: "row" | "grid" }) => {
   return (
     <Link
       to={`/package/${pkg.id}`}
-      className="group flex flex-col md:flex-row rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 fade-in"
+      className={`group flex rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 fade-in ${
+        layout === "row" ? "flex-col md:flex-row" : "flex-col h-full"
+      }`}
       style={{ animationDelay: `${index * 80}ms` }}
     >
-      <div className="relative w-full md:w-2/5 shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[280px] overflow-hidden">
+      <div className={`relative shrink-0 overflow-hidden ${
+        layout === "row" ? "w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px]" : "w-full aspect-[4/3]"
+      }`}>
         <img
           src={pkg.image}
           alt={pkg.title}
