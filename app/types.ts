@@ -60,5 +60,5 @@ export type Review = {
 export type YoutubeData = {
   channelId: string;
   channelName?: string;
-  latestVideo: { id: string; title: string; thumbnail: string };
+  videos: { id: string; title: string; thumbnail: string }[];
 };
