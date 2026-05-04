@@ -1,0 +1,62 @@
+{
+  "id": "punjab-heritage",
+  "title": "Punjab Heritage & Pride",
+  "destination": [
+    "Amritsar",
+    "Chandigarh"
+  ],
+  "duration": "4 Days",
+  "price": "\u20b914,999",
+  "theme": {
+    "primaryColor": "#ca8a04",
+    "secondaryColor": "#eab308",
+    "accentColor": "#facc15",
+    "backgroundColor": "#fefce8",
+    "textColor": "#422006"
+  },
+  "coverImage": "/images/punjab-heritage-cover.png",
+  "shortDescription": "Golden Temple spirituality, Wagah Border patriotism, and vibrant culture.",
+  "overview": "Soak in the spiritual peace of the Golden Temple and feel the patriotic fervor at the Wagah Border. Explore the modern planned city of Chandigarh.",
+  "highlights": [
+    "Golden Temple visit",
+    "Wagah Border Beating Retreat",
+    "Jallianwala Bagh",
+    "Rock Garden"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Amritsar",
+      "description": "Visit the Golden Temple in the evening."
+    },
+    {
+      "day": 2,
+      "title": "Amritsar History",
+      "description": "Jallianwala Bagh and Wagah Border ceremony."
+    },
+    {
+      "day": 3,
+      "title": "Transfer to Chandigarh",
+      "description": "Drive to Chandigarh, visit Rock Garden and Sukhna Lake."
+    },
+    {
+      "day": 4,
+      "title": "Departure",
+      "description": "Transfer to airport/station."
+    }
+  ],
+  "inclusions": [
+    "3 Nights accommodation",
+    "Breakfast",
+    "Transfers",
+    "Sightseeing"
+  ],
+  "exclusions": [
+    "Flights",
+    "Langar donations",
+    "Personal expenses"
+  ],
+  "gallery": [
+    "/images/punjab-heritage-cover.png"
+  ]
+}

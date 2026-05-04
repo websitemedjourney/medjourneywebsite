@@ -1,0 +1,83 @@
+{
+  "id": "gujarat-heritage",
+  "title": "Vibrant Gujarat",
+  "destination": [
+    "Ahmedabad",
+    "Kutch",
+    "Gir"
+  ],
+  "duration": "8 Days",
+  "price": "\u20b935,000",
+  "theme": {
+    "primaryColor": "#c2410c",
+    "secondaryColor": "#ea580c",
+    "accentColor": "#fb923c",
+    "backgroundColor": "#fff7ed",
+    "textColor": "#431407"
+  },
+  "coverImage": "/images/gujarat-heritage-cover.png",
+  "shortDescription": "White desert, Asiatic lions, and rich textile heritage.",
+  "overview": "Experience the diverse landscapes of Gujarat. From the endless white salt desert of Kutch to the wildlife of Gir National Park.",
+  "highlights": [
+    "Rann Utsav",
+    "Gir Jungle Safari",
+    "Sabarmati Ashram",
+    "Somnath Temple"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Ahmedabad",
+      "description": "Visit Sabarmati Ashram and Adalaj Stepwell."
+    },
+    {
+      "day": 2,
+      "title": "Drive to Bhuj/Kutch",
+      "description": "Evening at the White Rann."
+    },
+    {
+      "day": 3,
+      "title": "Rann of Kutch",
+      "description": "Explore local villages and Rann Utsav."
+    },
+    {
+      "day": 4,
+      "title": "Drive to Somnath",
+      "description": "Visit the majestic Somnath Temple."
+    },
+    {
+      "day": 5,
+      "title": "Drive to Gir",
+      "description": "Check-in at wildlife resort."
+    },
+    {
+      "day": 6,
+      "title": "Gir Safari",
+      "description": "Morning and evening jeep safaris to spot Asiatic Lions."
+    },
+    {
+      "day": 7,
+      "title": "Return to Ahmedabad",
+      "description": "Drive back, leisure evening."
+    },
+    {
+      "day": 8,
+      "title": "Departure",
+      "description": "Transfer to airport."
+    }
+  ],
+  "inclusions": [
+    "7 Nights accommodation",
+    "Breakfast & Dinner",
+    "Safari permits",
+    "Transfers"
+  ],
+  "exclusions": [
+    "Flights",
+    "Camera fees",
+    "Personal expenses"
+  ],
+  "gallery": [
+    "/images/gujarat-heritage-cover.png"
+  ]
+}

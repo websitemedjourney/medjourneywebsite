@@ -1,0 +1,209 @@
+{
+  "packages": [
+    {
+      "id": "capital-crown-kashmir",
+      "title": "Capital, Crown & Kashmir",
+      "destination": [
+        "Delhi",
+        "Agra",
+        "Kashmir"
+      ],
+      "duration": "14 Days",
+      "price": "\u20b939,999",
+      "image": "/images/kashmir-cover.jpg",
+      "shortDescription": "Explore Delhi, Agra, and Kashmir in one unforgettable journey through history and snow-clad valleys.",
+      "accentColor": "#F57C00"
+    },
+    {
+      "id": "kerala-backwaters",
+      "title": "Kerala Backwaters Bliss",
+      "destination": [
+        "Kochi",
+        "Alleppey",
+        "Munnar"
+      ],
+      "duration": "7 Days",
+      "price": "\u20b924,499",
+      "image": "/images/kerala-cover.jpg",
+      "shortDescription": "Cruise tranquil backwaters, sip cardamom tea on misty hills, and unwind in God's own country.",
+      "accentColor": "#10B981"
+    },
+    {
+      "id": "royal-rajasthan",
+      "title": "Royal Rajasthan Odyssey",
+      "destination": [
+        "Jaipur",
+        "Jodhpur",
+        "Jaisalmer",
+        "Udaipur"
+      ],
+      "duration": "10 Days",
+      "price": "\u20b932,899",
+      "image": "/images/rajasthan-cover.jpg",
+      "shortDescription": "Live like royalty across pink cities, blue alleys, golden dunes, and shimmering lake palaces.",
+      "accentColor": "#DC2626"
+    },
+    {
+      "id": "goa-getaway",
+      "title": "Goa Beach Getaway",
+      "destination": [
+        "Goa"
+      ],
+      "duration": "5 Days",
+      "price": "\u20b918,999",
+      "image": "/images/goa-getaway-cover.jpg",
+      "shortDescription": "Relax on sun-kissed beaches and enjoy the vibrant nightlife of Goa.",
+      "accentColor": "#f59e0b"
+    },
+    {
+      "id": "andaman-tropics",
+      "title": "Andaman Tropical Escapade",
+      "destination": [
+        "Port Blair",
+        "Havelock Island"
+      ],
+      "duration": "6 Days",
+      "price": "\u20b934,500",
+      "image": "/images/andaman-tropics-cover.png",
+      "shortDescription": "Crystal clear waters, pristine beaches, and underwater wonders.",
+      "accentColor": "#38bdf8"
+    },
+    {
+      "id": "himalayan-foothills",
+      "title": "Himalayan Foothills Serenity",
+      "destination": [
+        "Rishikesh",
+        "Haridwar",
+        "Mussoorie"
+      ],
+      "duration": "5 Days",
+      "price": "\u20b916,999",
+      "image": "/images/himalayan-foothills-cover.png",
+      "shortDescription": "Spiritual awakening and nature trails in the Himalayan foothills.",
+      "accentColor": "#84cc16"
+    },
+    {
+      "id": "sikkim-darjeeling",
+      "title": "Sikkim & Darjeeling Delight",
+      "destination": [
+        "Gangtok",
+        "Darjeeling"
+      ],
+      "duration": "7 Days",
+      "price": "\u20b928,500",
+      "image": "/images/sikkim-darjeeling-cover.png",
+      "shortDescription": "Majestic Kangchenjunga views, tea gardens, and Buddhist monasteries.",
+      "accentColor": "#f87171"
+    },
+    {
+      "id": "punjab-heritage",
+      "title": "Punjab Heritage & Pride",
+      "destination": [
+        "Amritsar",
+        "Chandigarh"
+      ],
+      "duration": "4 Days",
+      "price": "\u20b914,999",
+      "image": "/images/punjab-heritage-cover.png",
+      "shortDescription": "Golden Temple spirituality, Wagah Border patriotism, and vibrant culture.",
+      "accentColor": "#facc15"
+    },
+    {
+      "id": "meghalaya-monsoons",
+      "title": "Mystical Meghalaya",
+      "destination": [
+        "Shillong",
+        "Cherrapunji",
+        "Dawki"
+      ],
+      "duration": "6 Days",
+      "price": "\u20b926,999",
+      "image": "/images/meghalaya-monsoons-cover.png",
+      "shortDescription": "Living root bridges, crystal clear rivers, and the Scotland of the East.",
+      "accentColor": "#4ade80"
+    },
+    {
+      "id": "gujarat-heritage",
+      "title": "Vibrant Gujarat",
+      "destination": [
+        "Ahmedabad",
+        "Kutch",
+        "Gir"
+      ],
+      "duration": "8 Days",
+      "price": "\u20b935,000",
+      "image": "/images/gujarat-heritage-cover.png",
+      "shortDescription": "White desert, Asiatic lions, and rich textile heritage.",
+      "accentColor": "#fb923c"
+    },
+    {
+      "id": "spiritual-varanasi",
+      "title": "Spiritual Varanasi",
+      "destination": [
+        "Varanasi",
+        "Sarnath"
+      ],
+      "duration": "3 Days",
+      "price": "\u20b912,500",
+      "image": "/images/spiritual-varanasi-cover.jpg",
+      "shortDescription": "Experience the divine energy of the world's oldest living city.",
+      "accentColor": "#fbbf24"
+    },
+    {
+      "id": "karnataka-coasts",
+      "title": "Karnataka Coasts & Coffee",
+      "destination": [
+        "Coorg",
+        "Gokarna",
+        "Murudeshwar"
+      ],
+      "duration": "7 Days",
+      "price": "\u20b929,999",
+      "image": "/images/karnataka-coasts-cover.jpg",
+      "shortDescription": "Lush coffee plantations meeting pristine beaches.",
+      "accentColor": "#60a5fa"
+    },
+    {
+      "id": "tamilnadu-temples",
+      "title": "Tamil Nadu Temple Run",
+      "destination": [
+        "Chennai",
+        "Mahabalipuram",
+        "Madurai"
+      ],
+      "duration": "6 Days",
+      "price": "\u20b922,500",
+      "image": "/images/tamilnadu-temples-cover.jpg",
+      "shortDescription": "Dravidian architecture, rock-cut caves, and cultural heritage.",
+      "accentColor": "#f472b6"
+    },
+    {
+      "id": "ladakh-adventure",
+      "title": "Ladakh High Altitude Adventure",
+      "destination": [
+        "Leh",
+        "Nubra Valley",
+        "Pangong Tso"
+      ],
+      "duration": "7 Days",
+      "price": "\u20b942,000",
+      "image": "/images/ladakh-adventure-cover.jpg",
+      "shortDescription": "High mountain passes, crystal clear lakes, and ancient monasteries.",
+      "accentColor": "#818cf8"
+    },
+    {
+      "id": "maharashtra-magic",
+      "title": "Maharashtra Magic",
+      "destination": [
+        "Mumbai",
+        "Lonavala",
+        "Pune"
+      ],
+      "duration": "5 Days",
+      "price": "\u20b921,500",
+      "image": "/images/maharashtra-magic-cover.jpg",
+      "shortDescription": "Bustling city life, hill stations, and historical forts.",
+      "accentColor": "#fb7185"
+    }
+  ]
+}

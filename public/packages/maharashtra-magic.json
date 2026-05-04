@@ -1,0 +1,68 @@
+{
+  "id": "maharashtra-magic",
+  "title": "Maharashtra Magic",
+  "destination": [
+    "Mumbai",
+    "Lonavala",
+    "Pune"
+  ],
+  "duration": "5 Days",
+  "price": "\u20b921,500",
+  "theme": {
+    "primaryColor": "#be123c",
+    "secondaryColor": "#e11d48",
+    "accentColor": "#fb7185",
+    "backgroundColor": "#fff1f2",
+    "textColor": "#881337"
+  },
+  "coverImage": "/images/maharashtra-magic-cover.jpg",
+  "shortDescription": "Bustling city life, hill stations, and historical forts.",
+  "overview": "Experience the fast-paced life of Mumbai, the lush green hills of Lonavala, and the cultural richness of Pune in this 5-day tour.",
+  "highlights": [
+    "Gateway of India",
+    "Marine Drive",
+    "Tiger Point Lonavala",
+    "Shaniwar Wada"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Mumbai",
+      "description": "Visit Gateway of India and Marine Drive."
+    },
+    {
+      "day": 2,
+      "title": "Elephanta Caves",
+      "description": "Ferry ride to Elephanta caves, evening shopping."
+    },
+    {
+      "day": 3,
+      "title": "Drive to Lonavala",
+      "description": "Visit Karla Caves and Tiger Point."
+    },
+    {
+      "day": 4,
+      "title": "Drive to Pune",
+      "description": "Visit Aga Khan Palace and Shaniwar Wada."
+    },
+    {
+      "day": 5,
+      "title": "Departure",
+      "description": "Transfer to Pune/Mumbai airport."
+    }
+  ],
+  "inclusions": [
+    "4 Nights accommodation",
+    "Breakfast",
+    "Transfers",
+    "Sightseeing"
+  ],
+  "exclusions": [
+    "Flights",
+    "Ferry tickets",
+    "Personal expenses"
+  ],
+  "gallery": [
+    "/images/maharashtra-magic-cover.jpg"
+  ]
+}
