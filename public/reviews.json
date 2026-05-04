@@ -1,9 +1,0 @@
-{
-  "reviews": [
-    { "name": "Anita Menon", "rating": 5, "review": "Very well organized trip. Every detail was taken care of — highly recommended!", "image": "https://i.pravatar.cc/120?img=47" },
-    { "name": "Rahul Verma", "rating": 5, "review": "Kashmir was a dream. Our tour manager went above and beyond.", "image": "https://i.pravatar.cc/120?img=12" },
-    { "name": "Priya Iyer", "rating": 4, "review": "Loved the houseboat in Alleppey. Will book again with them.", "image": "https://i.pravatar.cc/120?img=32" },
-    { "name": "Karan Shah", "rating": 5, "review": "Rajasthan trip was royal in every sense. Great hotels and food.", "image": "https://i.pravatar.cc/120?img=15" },
-    { "name": "Meera Nair", "rating": 5, "review": "Smooth bookings, wonderful guides, and unforgettable sunsets.", "image": "https://i.pravatar.cc/120?img=49" }
-  ]
-}
