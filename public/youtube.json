@@ -1,9 +1,11 @@
 {
   "channelId": "UCqECaJ8Gagnn7YCbPEzWH6g",
   "channelName": "Travel Diaries",
-  "latestVideo": {
-    "id": "hlWiI4xVXKY",
-    "title": "Top 10 Places to Visit in India 2026",
-    "thumbnail": "https://i.ytimg.com/vi/hlWiI4xVXKY/maxresdefault.jpg"
-  }
+  "videos": [
+    {
+      "id": "hlWiI4xVXKY",
+      "title": "Top 10 Places to Visit in India 2026",
+      "thumbnail": "https://i.ytimg.com/vi/hlWiI4xVXKY/maxresdefault.jpg"
+    }
+  ]
 }
