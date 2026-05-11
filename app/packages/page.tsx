@@ -23,7 +23,7 @@ const PackagesPage = () => {
     // Scroll to top when loading the page
     window.scrollTo(0, 0);
 
-    fetch("/packages/index.json")
+    fetch("/api/packages")
       .then((r) => r.json())
       .then((d) => setPackages(d.packages || []))
       .finally(() => setLoading(false));
@@ -50,7 +50,8 @@ const PackagesPage = () => {
       return parseDuration(a.duration) - parseDuration(b.duration);
     if (sort === "long")
       return parseDuration(b.duration) - parseDuration(a.duration);
-    return 0;
+    // Default: highlighted packages first
+    return (b.highlighted ? 1 : 0) - (a.highlighted ? 1 : 0);
   });
 
   const totalPages = Math.ceil(sortedPackages.length / itemsPerPage);

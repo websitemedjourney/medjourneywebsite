@@ -1,13 +1,10 @@
 import TravelerSilhouette from "./TravelerSilhouette";
 
 const ExcludedSection = ({ items }: { items: string[] }) => (
-  <section
-    className="relative overflow-hidden py-16 lg:py-20"
-    style={{ backgroundColor: "rgb(var(--accent-color))" }}
-  >
+  <section className="relative overflow-hidden py-16 lg:py-20 bg-brand-orange">
     <TravelerSilhouette
       mirrored
-      className="absolute left-[-40px] sm:left-0 bottom-0 h-[100%] w-auto pointer-events-none text-white/90"
+      className="absolute -left-10 sm:left-0 bottom-0 h-full w-auto pointer-events-none text-white/90"
       color="white"
     />
     <div

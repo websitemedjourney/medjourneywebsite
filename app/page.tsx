@@ -6,8 +6,6 @@ import ReviewsSection from "@/components/ReviewsSection";
 import YoutubeSection from "@/components/YoutubeSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
-import { ThemeFromFirstPackage } from "@/components/theme-from-first-package";
-
 export const metadata: Metadata = {
   title: "Med Journey — Hand-crafted journeys across India",
   description:
@@ -17,8 +15,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <ThemeFromFirstPackage />
-      <div className="min-h-screen theme-bg">
+      <div className="min-h-screen bg-white">
         <Header />
         <main>
           <Hero />

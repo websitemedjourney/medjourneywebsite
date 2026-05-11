@@ -6,8 +6,6 @@ import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
-import { applyTheme, DEFAULT_THEME } from "@/lib/theme";
-
 const ContactPage = () => {
   const [form, setForm] = useState({
     name: "",
@@ -24,8 +22,6 @@ const ContactPage = () => {
   >("idle");
 
   useEffect(() => {
-    // Apply default theme to ensure styling is consistent
-    applyTheme(DEFAULT_THEME);
     document.title = "Contact Us - Med Journey";
   }, []);
 
@@ -61,25 +57,32 @@ const ContactPage = () => {
     setSubmitStatus("idle");
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          phone: form.phone,
-          subject: form.subject,
-          message: form.message,
-          to_email: "websitemedjourney@gmail.com",
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-      );
+      await Promise.allSettled([
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          {
+            from_name: form.name,
+            from_email: form.email,
+            phone: form.phone,
+            subject: form.subject,
+            message: form.message,
+            to_email: "websitemedjourney@gmail.com",
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        ),
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }),
+      ]);
 
       setSubmitStatus("success");
       setForm({ name: "", email: "", phone: "", subject: "", message: "" });
       toast.success("Message sent successfully!");
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Contact error:", error);
       setSubmitStatus("error");
       toast.error("Something went wrong. Please try again.");
     } finally {

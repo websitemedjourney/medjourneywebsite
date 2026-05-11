@@ -1,18 +1,14 @@
 import TravelerSilhouette from "./TravelerSilhouette";
 
 const IncludedSection = ({ items }: { items: string[] }) => (
-  <section
-    className="relative overflow-hidden py-16 lg:py-20"
-    style={{ backgroundColor: "rgb(var(--primary-color))" }}
-  >
-    {/* Decorative silhouette */}
+  <section className="relative overflow-hidden py-16 lg:py-20 bg-brand-blue">
     <TravelerSilhouette
-      className="absolute right-[-40px] sm:right-0 bottom-0 h-[100%] w-auto pointer-events-none"
-      color={`rgb(var(--accent-color))`}
+      className="absolute -right-10 sm:right-0 bottom-0 h-full w-auto pointer-events-none"
+      color="#f57c01"
     />
     <div
       className="absolute inset-0 pointer-events-none"
-      style={{ background: "radial-gradient(circle at 80% 50%, rgb(var(--accent-color) / 0.1), transparent 60%)" }}
+      style={{ background: "radial-gradient(circle at 80% 50%, rgba(245,124,1,0.1), transparent 60%)" }}
     />
 
     <div className="container-px relative z-10">

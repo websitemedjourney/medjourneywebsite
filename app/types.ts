@@ -6,7 +6,8 @@ export type PackageSummary = {
   price: string;
   image: string;
   shortDescription: string;
-  accentColor?: string;
+  highlighted?: boolean;
+  published?: boolean;
 };
 
 export type ItineraryDay = {
@@ -23,13 +24,6 @@ export type PackageDetail = {
   destination: string[];
   duration: string;
   price: string;
-  theme: {
-    primaryColor: string;
-    secondaryColor: string;
-    accentColor: string;
-    backgroundColor: string;
-    textColor: string;
-  };
   coverImage: string;
   shortDescription: string;
   overview: string;
@@ -40,6 +34,9 @@ export type PackageDetail = {
   gallery: string[];
   termsAndConditions?: TermsAndConditions;
   termsNote?: string;
+  itineraryPdf?: string;
+  highlighted?: boolean;
+  published?: boolean;
 };
 
 export type TermsAndConditions = {
@@ -51,10 +48,28 @@ export type TermsAndConditions = {
 };
 
 export type Review = {
+  id?: number;
   name: string;
+  email?: string;
   rating: number;
   review: string;
-  image: string;
+  image?: string;
+  packageId?: string;
+  highlightedHome?: boolean;
+  highlightedPackage?: boolean;
+  approved?: boolean;
+  createdAt?: string;
+};
+
+export type ContactSubmission = {
+  id?: number;
+  name: string;
+  email: string;
+  phone?: string;
+  subject: string;
+  message: string;
+  read?: boolean;
+  createdAt?: string;
 };
 
 export type YoutubeData = {
