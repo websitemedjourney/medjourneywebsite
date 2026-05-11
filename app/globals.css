@@ -177,6 +177,10 @@
   .fade-in {
     animation: fadeUp 0.7s ease-out both;
   }
+
+  .bg-main {
+    @apply bg-gradient-to-br from-[rgb(var(--primary-color))/10] to-[rgb(var(--accent-color))/5];
+  }
 }
 
 @keyframes fadeUp {
