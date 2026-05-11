@@ -1,4 +1,5 @@
 import { PackageSummary } from "@/app/types";
+import { formatDuration, formatPrice } from "@/lib/format";
 import { MapPin, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -37,11 +38,9 @@ const PackageCard = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
         <div
           className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg"
-          style={{
-            backgroundColor: pkg.accentColor || "rgb(var(--accent-color))",
-          }}
+          style={{ backgroundColor: "#f57c01" }}
         >
-          {pkg.duration}
+          {formatDuration(pkg.duration)}
         </div>
         <div className="absolute bottom-4 left-4 right-4 text-white">
           <div className="flex items-center gap-1.5 text-xs opacity-90 mb-1">
@@ -62,18 +61,18 @@ const PackageCard = ({
           <div>
             <div className="text-xs text-muted-foreground">Starting from</div>
             <div className="font-display text-2xl font-bold theme-text-primary">
-              {pkg.price}
+              {formatPrice(pkg.price)}
             </div>
           </div>
           <span
             className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-3"
-            style={{ color: pkg.accentColor || "rgb(var(--accent-color))" }}
+            style={{ color: "#f57c01" }}
           >
             View Details <ArrowRight className="w-4 h-4" />
           </span>
         </div>
         <div className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
-          <Clock className="w-3.5 h-3.5" /> {pkg.duration} of unforgettable
+          <Clock className="w-3.5 h-3.5" /> {formatDuration(pkg.duration)} of unforgettable
           memories
         </div>
       </div>

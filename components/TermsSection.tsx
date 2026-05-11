@@ -18,14 +18,14 @@ const TermsSection = ({ terms, note }: { terms?: TermsAndConditions; note?: stri
       <div className="container-px max-w-4xl">
 
 
-        <h2 className="font-display text-3xl sm:text-4xl font-bold theme-text-primary mb-8 tracking-tight">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-blue mb-8 tracking-tight">
           Terms &amp; Conditions
         </h2>
 
         <div className="space-y-8">
           {groups.map((key) => (
             <div key={key}>
-              <h3 className="font-bold text-base sm:text-lg theme-text-primary mb-2">
+              <h3 className="font-bold text-base sm:text-lg text-brand-blue mb-2">
                 {LABELS[key]}
               </h3>
               <ul className="space-y-1.5 pl-5 list-disc marker:text-gray-600">

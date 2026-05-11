@@ -3,6 +3,8 @@
 @import "tw-animate-css";
 
 @theme inline {
+  --color-brand-blue: #010e3c;
+  --color-brand-orange: #f57c01;
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
